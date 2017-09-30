@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/bloodRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bloodPressureIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_24"
+            android:src="@drawable/dial_bg" />
+
+        <ImageView
+            android:id="@+id/bloodPressureOutIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_24" />
+
+        <ImageView
+            android:id="@+id/bloodPressureInIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_24" />
+
+        <RelativeLayout
+            android:id="@+id/bloodpressureRL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_120">
+
+            <TextView
+                android:id="@+id/bloodpressureTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/sp_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/bloodpressureTV"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_toRightOf="@id/bloodpressureTV"
+                android:text="@string/text_mmhg"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/sp_17" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bloodpressureResultTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bloodpressureRL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textSize="@dimen/sp_16" />
+
+        <Button
+            android:id="@+id/startMeasureBtn"
+            android:layout_below="@id/bloodpressureResultTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_measure_btn"
+            android:gravity="center"
+            android:text="@string/start_measure_btn"
+            android:textColor="@color/color_measure_btn"
+            android:textSize="@dimen/sp_12"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_below="@id/bloodRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bloodpressure_demo"/>
+
+</RelativeLayout>

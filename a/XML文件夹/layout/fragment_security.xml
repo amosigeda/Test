@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_14"
+        android:gravity="center"
+        android:text="@string/text_bottom_two"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/sp_16" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_60"
+        android:background="@drawable/item_bg">
+
+        <RelativeLayout
+            android:id="@+id/securityFenceRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_13">
+
+            <TextView
+                android:id="@+id/securityFenceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:text="@string/text_security_fence"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/sp_18"
+                android:layout_centerVertical="true"/>
+
+            <Button
+                android:id="@+id/setBtn"
+                android:layout_width="@dimen/dp_54"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_102"
+                android:background="@drawable/icon_security_state"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/sp_12"
+                android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                android:id="@+id/viewRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_10"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/viewTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_view"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/sp_12"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/goIV"
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_toRightOf="@id/viewTV"
+                    android:src="@drawable/icon_more"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/goAwayRecordTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/securityFenceRL"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_11"
+            android:text="@string/text_go_away_record"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/goAwayRecordTV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/goAwayRecordTitleTV"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_12"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/goAwayRecordTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/goAwayRecordTV1"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_6"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/goAwayRecordTV3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/goAwayRecordTV2"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_6"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_normal_list">
+
+    <com.lewic.bracelet.widget.BackTitle
+        android:id="@+id/titleRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title1="@string/text_data_detail" />
+
+    <RelativeLayout
+        android:id="@+id/measureRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleRL"
+        android:layout_marginTop="@dimen/dp_75">
+
+        <ImageView
+            android:id="@+id/bloodPressureIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/dial_bg" />
+
+        <ImageView
+            android:id="@+id/bloodPressureOutIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/bloodPressureInIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/pulseIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pulse_measure_bg" />
+
+        <TextView
+            android:id="@+id/measureStateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_183"
+            android:textColor="@color/color_616690"
+            android:textSize="@dimen/sp_24" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bloodpressureRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/measureRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_2">
+
+        <TextView
+            android:id="@+id/bloodpressureTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rung"
+            android:textColor="@color/color_616690"
+            android:textSize="@dimen/sp_24" />
+
+        <TextView
+            android:id="@+id/bloodpressureUnitTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bloodpressureTV"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_toRightOf="@id/bloodpressureTV"
+            android:text="@string/text_mmhg"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:id="@+id/bloodpressureStateIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/bloodpressureUnitTV"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pulseRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bloodpressureRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/pulseTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rung"
+            android:textColor="@color/color_616690"
+            android:textSize="@dimen/sp_24" />
+
+        <TextView
+            android:id="@+id/pulseUnitTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/pulseTV"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_toRightOf="@id/pulseTV"
+            android:text="@string/text_bpm"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:id="@+id/pulseStateIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/pulseUnitTV"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_79"
+        android:background="@drawable/cancel_btn_normal"
+        android:gravity="center"
+        android:onClick="onClickBackEvent"
+        android:text="@string/text_cancel"
+        android:textColor="@color/color_05a6ff"
+        android:textSize="@dimen/sp_12" />
+
+    <RelativeLayout
+        android:id="@+id/measureResultBtnRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_80"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/reMeasureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_measure_btn"
+            android:gravity="center"
+            android:text="@string/text_remeasure"
+            android:textColor="@color/color_measure_btn"
+            android:textSize="@dimen/sp_12" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_toRightOf="@id/reMeasureBtn"
+            android:background="@drawable/selector_measure_btn"
+            android:gravity="center"
+            android:text="@string/text_save"
+            android:textColor="@color/color_measure_btn"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

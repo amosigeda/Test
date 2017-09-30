@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_normal_list">
+
+    <com.lewic.bracelet.widget.BackTitle
+        android:id="@+id/titleRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title1="@string/text_data_detail" />
+
+    <com.lewic.bracelet.widget.DataTopBar
+        android:id="@+id/ll_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleRL"
+        android:layout_marginTop="@dimen/dp_16" />
+
+    <RelativeLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top_bar"/>
+</RelativeLayout>
